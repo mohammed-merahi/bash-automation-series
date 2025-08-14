@@ -1,0 +1,50 @@
+============================================
+ System Health Report for ubuntu1.midz.local
+ Generated on: Thu Aug 14 07:28:07 PM UTC 2025
+============================================
+
+Disk Usage:
+tmpfs           601M  2.2M  599M   1% /run
+/dev/sda2        33G   19G   13G  60% /
+tmpfs           3.0G     0  3.0G   0% /dev/shm
+tmpfs           5.0M  8.0K  5.0M   1% /run/lock
+tmpfs           3.0G     0  3.0G   0% /run/qemu
+tmpfs           601M  132K  601M   1% /run/user/1000
+
+CPU Load (1/5/15 min average):
+   0.45, 0.41, 0.37
+
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           5.9Gi       3.1Gi       583Mi        33Mi       2.5Gi       2.7Gi
+Swap:          3.8Gi       1.3Mi       3.8Gi
+
+Failed Systemd Services:
+  UNIT                 LOAD   ACTIVE SUB    DESCRIPTION
+● sssd-nss.socket      loaded failed failed SSSD NSS Service responder socket
+● sssd-pam-priv.socket loaded failed failed SSSD PAM Service responder private socket
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+2 loaded units listed.
+
+Top 5 Memory-Hungry Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+graylog     1565  0.9 24.7 4756684 1519760 ?     Sl   10:05   5:07 /usr/share/graylog-server/jvm/bin/java -Xms2g -Xmx2g -server -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow -Djdk.tls.acknowledgeCloseNotify=true -Dlog4j2.formatMsgNoLookups=true -jar -Dlog4j.configurationFile=file:///etc/graylog/server/log4j2.xml -Dgraylog2.installation_source=deb /usr/share/graylog-server/graylog.jar server -f /etc/graylog/server/server.conf -np
+merahi01    2013  0.8  4.5 3869776 281016 ?      Ssl  10:05   4:49 /usr/bin/gnome-shell
+mongodb     1526  1.6  2.4 563860 152876 ?       Ssl  10:05   9:32 /usr/bin/mongod --config /etc/mongod.conf
+merahi01    2336  0.0  1.7 991680 106640 ?       Sl   10:05   0:01 /usr/libexec/evolution-data-server/evolution-alarm-notify
+merahi01    2188  0.0  1.4 1375104 89064 ?       Ssl  10:05   0:01 /usr/libexec/evolution-source-registry
+
+Top 5 CPU-Hungry Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+mongodb     1526  1.6  2.4 563860 152876 ?       Ssl  10:05   9:32 /usr/bin/mongod --config /etc/mongod.conf
+graylog     1565  0.9 24.7 4756684 1519760 ?     Sl   10:05   5:07 /usr/share/graylog-server/jvm/bin/java -Xms2g -Xmx2g -server -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow -Djdk.tls.acknowledgeCloseNotify=true -Dlog4j2.formatMsgNoLookups=true -jar -Dlog4j.configurationFile=file:///etc/graylog/server/log4j2.xml -Dgraylog2.installation_source=deb /usr/share/graylog-server/graylog.jar server -f /etc/graylog/server/server.conf -np
+merahi01    2013  0.8  4.5 3869776 281016 ?      Ssl  10:05   4:49 /usr/bin/gnome-shell
+root      116038  0.4  0.1  40176  7944 pts/0    S+   19:28   0:00 sudo ./system-health.sh
+root         794  0.3  0.1 318472  9492 ?        Ssl  10:05   2:01 /usr/bin/vmtoolsd
+
+System Uptime:
+up 9 hours, 23 minutes
